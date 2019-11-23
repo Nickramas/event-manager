@@ -11,10 +11,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 import { InfoModule } from './info/info.module';
+import { GuestlistModule } from './guestlist/guestlist.module';
+import { HttpClientModule } from '@angular/common/http';
+import { AddGuestModule } from './add-guest/add-guest.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,10 @@ import { InfoModule } from './info/info.module';
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
-    InfoModule
+    InfoModule,
+    GuestlistModule,
+    AddGuestModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

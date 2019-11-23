@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Gästeliste</h1>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Bringt mit</th>
+    </tr>
+    <tr *ngFor="let guest of guestlist">
+      <td>{{ guest.name }}</td>
+      <td>{{ guest.brings }}</td>
+    </tr>
+  </table>
+</div>

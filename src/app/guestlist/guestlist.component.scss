@@ -1,0 +1,32 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 1px 1px 5px #ccc;
+  border-radius: 10px;
+
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
+  
+  tr:first-child {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
+  tr:last-child {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  th, td {
+    font-weight: normal;
+    padding: 10px;
+  }
+  
+  th {
+    font-size: 14pt;
+    text-align: left;
+  }
+}
+
+
