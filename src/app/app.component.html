@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <span>{{ title }}</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu>
+    <button mat-menu-item>
+      <span [routerLink]="">Startseite</span>
+    </button>
+    <button mat-menu-item>
+      <span [routerLink]="guestlist">Gästeliste</span>
+    </button>
+    <button mat-menu-item>
+      <span  [routerLink]="signin">Eintragen</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
