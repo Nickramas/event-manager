@@ -12,6 +12,7 @@ export class AddGuestComponent implements OnInit {
 
   public guestName: string;
   public guestBrings: string;
+  public successMessage: string;
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +21,11 @@ export class AddGuestComponent implements OnInit {
 
 
   public onButtonClicked() {
+    if (!(this.guestName)) {
+      this.successMessage = 'Naja, du musst wenigstens deinen namen eingeben.';
+      return;
+    }
+
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -34,5 +40,7 @@ export class AddGuestComponent implements OnInit {
     console.log(JSON.stringify(guest));
 
     this.http.post<Guest>(environment.apiUrl + '/add-guest', JSON.stringify(guest), httpOptions).toPromise();
+
+    this.successMessage = 'Du solltest jetzt eingetragen sein. Ich war zu faul um das noch zu checken.\nGuck einfach mal in der Gästeliste nach, ob du drin bist.';
   }
 }
