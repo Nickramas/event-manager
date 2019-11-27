@@ -1,1 +1,11 @@
-<div class="container"></div>
+<div class="container">
+  <div id="add-guest-form">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Name" (input)="guestName = $event.target.value">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Ich bringe mit..." (input)="guestBrings = $event.target.value">
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="onButtonClicked()">Eintragen</button>
+  </div>
+</div>
